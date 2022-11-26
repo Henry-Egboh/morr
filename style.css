@@ -42,7 +42,7 @@ h1, h3{
 }
 
 /* form input type  */
-.row input{
+.row input, .row select{
     width: 100%;
     padding: 0.5rem 1rem;
     border-radius: 0.25rem;
@@ -73,7 +73,7 @@ h1, h3{
 }
 
 /* placeholder text */
-.row input::placeholder, .row textarea::placeholder{
+.row input::placeholder, .row textarea::placeholder, .row input[type="date"], .marital{
     font-size: 0.75rem;
     font-weight: 300;
     font-family: 'Fira Sans', sans-serif;
@@ -145,7 +145,7 @@ h1, h3{
     border: none;
 }
 
-/* wrong input validation  */
+/* wrong input check  */
 input:focus:invalid{
     color: rgb(252, 16, 16);
     border: 1px solid rgb(252, 16, 16);
