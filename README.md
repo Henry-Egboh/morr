@@ -1,3 +1,3 @@
-# A TICKET REGISTRATION FORM
-## A ticket to a fun fare
-This web form can be used in entertainment and game shows website for visitors 
+# A REGISTRATION FORM
+## A form for new intake in a firm
+An employee registration form that captures the bio-data of the employees

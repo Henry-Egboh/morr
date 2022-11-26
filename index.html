@@ -11,78 +11,105 @@
 <main class="container">
     <section class="section">
         <!-- header text -->
-        <h1>Seat Reservation</h1>
-        <form action="submit" method="post">
-            <!-- username -->
-            <div class="sec">
-                <label for="fullname">Fullname</label>
-                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+        <div class="title">
+            <h1>Registration Page</h1>
+        </div>
+        <form class="forms" action="submit" method="post">
+          <!-- subtitle -->
+            <div class="subtitle">
+                <h3>Personal Information</h3>
             </div>
-            <!-- address -->
-            <div class="sec">
+              <!-- row 1 -->
+            <div class="row">
+                <label for="firstname">Firstname</label>
+                <input type="text" name="firstname" id="firstname" placeholder="Enter your first name" required>
+            </div>
+            <!-- row 2 -->
+            <div class="row">
+                <label for="lastname">Lastname</label>
+                <input type="text" name="lastname" id="lastname" placeholder="Enter your last name" required>
+            </div>
+            <!-- row 3 -->
+            <div class="row">
                 <label for="address">Address</label>
-                <input type="text" id="address" name="address" placeholder="Enter your address" required>
+                <textarea name="address" id="address" placeholder="Enter your address" required></textarea>
             </div>
-            <!-- mobile number -->
-            <div class="sec">
-                <label for="mobile">Mobile Number:</label>
-                <input type="tel" id="mobile" name="mobile" placeholder="23480XXXXXXXX" minlength="11" maxlength="13" required>
+            <!-- row 4 -->
+            <div class="row">
+                <label for="state">State</label>
+                <input type="text" name="state" id="state" placeholder="Which state are you from?" required>
             </div>
-            <!-- alternate mobile number -->
-            <div class="sec">
-                <label for="mobile">Home Mobile Number (optional):</label>
-                <input type="tel" id="mobile" name="mobile" placeholder="23480XXXXXXXX" minlength="11" maxlength="13">
+            <!-- row 5 -->
+            <div class="row">
+                <label for="nationality">Nationality</label>
+                <input type="text" name="nationality" id="nationality" placeholder="Country of origin?" required>
             </div>
-            <!-- email -->
-            <div class="sec">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <!-- row 6 -->
+            <div class="row">
+                <label for="mobile">Mobile number</label>
+                <input type="tel" name="mobile" id="mobile" placeholder="Enter your mobile number" minlength="11" maxlength="11" required>
             </div>
-            <!-- remarks -->
-            <div class="sec">
-                <label for="remarks">Remarks (optional):</label>
-                <textarea name="remark" id="remarks" cols="30" rows="10" placeholder="Additional Information"></textarea>
+            <!-- row 7 -->
+            <div class="row">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email" required>
             </div>
-            <!-- fieldset area for radio buttons -->
-            <!-- first row buttons -->
-            <div class="sec">
-                <fieldset id="tickets">
-                    <label for="">
-                      <input type="radio" name="tickets" value="singles" checked> Single
+            <!-- row 8  for radio buttons-->
+            <div class="row_radio">
+                <fieldset class="no_outline" id="gender">
+                    <label class="gender_label">Gender</label>
+                    <label class="space_radio">
+                    <input type="radio" name="gender" value="radio" checked> Male
                     </label>
-                    <label for="">
-                      <input type="radio" name="tickets" value="couple"> Table for 2
-                    </label>
-                    <label for="">
-                      <input type="radio" name="tickets" value="family"> Table for 4
-                    </label>
-                    <label for="">
-                        <input type="radio" name="tickets" value="family"> VIP
-                      </label>
-                  </fieldset>
-            </div>
-            <!-- row two buttons -->
-            <div class="sec">
-                <fieldset id="gender">
-                    <label for="">
-                        <input type="radio" name="gender" value="male" checked> Male
-                    </label>
-                    <label for="">
-                        <input type="radio" name="gender" value="female"> Female
+                    <label>
+                    <input type="radio" name="gender" value="radio"> Female
                     </label>
                 </fieldset>
             </div>
-            <!-- row three buttons -->
-            <div class="sec">
-                <fieldset id="terms">
-                    <label for="">
-                        <input type="checkbox" name="terms" value="terms"> I declare that the information
-                        provided are accurate and I accept the terms and conditons of Morr Group.
-                    </label>
-                </fieldset>
+            <!-- sub title -->
+           <div class="subtitle">
+            <h3>Next of Kin Information</h3>
+           </div>
+           <!-- row 1 -->
+            <div class="row">
+                <label for="firstname">Firstname</label>
+                <input type="text" name="firstname" id="firstname" placeholder="Enter your first name" required>
             </div>
-            <!-- SUBMIT BUTTON -->
-            <button type="submit">Submit</button>
+            <!-- row 2 -->
+            <div class="row">
+                <label for="lastname">Lastname</label>
+                <input type="text" name="lastname" id="lastname" placeholder="Enter your last name" required>
+            </div>
+            <!-- row 3 -->
+            <div class="row">
+                <label for="address">Address</label>
+                <textarea name="address" id="address" placeholder="Enter your address" required></textarea>
+            </div>
+            <!-- row 4 -->
+            <div class="row">
+                <label for="mobile">Mobile number</label>
+                <input type="tel" name="mobile" id="mobile" placeholder="Enter your mobile number" minlength="11" maxlength="11" required>
+            </div>
+            <!-- row 5 -->
+            <div class="row">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <!-- row 5 -->
+            <div class="row">
+                <label for="relationship">Relationship</label>
+                <input type="text" name="relationship" id="relationship" placeholder="What's the Relationship" required>
+            </div>
+            <!-- row 6 -->
+            <div class="row_check">
+              <fieldset class="no_outline" id="check">
+                <label>
+                    <input type="checkbox" name="check" value="check"> I understand that every false information in this registration can lead to my disqualification 
+                </label>
+              </fieldset>
+            </div>
+            <!-- submit button  -->
+            <button class="submit" type="submit" value="submit">Submit</button>
         </form>
     </section>
 </main>

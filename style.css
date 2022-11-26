@@ -8,31 +8,145 @@
 body{
     font-size: 100%;
     height: 100vh;
+    background: linear-gradient(to top, rgba(255, 255, 255), rgba(206, 112, 123, 0.2), rgb(255, 255, 255));
     font-family: 'Fira Sans', sans-serif;
     /* font-family: 'PT Sans', sans-serif;  */
 }
 
-.container{
-    position: relative;
-    width: 100%;
-    background: linear-gradient(to left top, rgba(208, 255, 208), rgba(206, 112, 123), rgb(163, 161, 89));
-    height: 100vh;
+h1, h3{
+    font-family: 'PT Sans', sans-serif;
 }
 
+/* container for form */
 .section{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 80%;
+    margin: 0rem auto;
+    width: 60%;
+    padding: 3rem 5rem;
+    box-shadow: 0rem 0rem 1.8rem 0rem rgba(0, 0, 0, 0.1);
     background-color: #fff;
-    padding: 2rem;
-    text-align: center;
-    border-radius: 0.5rem;
-    box-shadow: inset 0rem 0rem 1rem 0rem rgba(0, 0, 0, 0.2),
-                0rem 0rem 1.5rem 0rem rgba(255, 255, 255, 0.6);
 }
 
-.sec{
-    margin: 0.5rem 0rem;
+/* container for label and input */
+.row{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0rem;
+}
+
+/* label for inputs */
+.row label, .gender_label{
+    margin-right: 0.5rem;
+    width: 8rem;
+    font-weight: 300;
+    font-size: 0.875rem;
+}
+
+/* form input type  */
+.row input{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    outline: none;
+    border: 1px solid rgb(139, 130, 130);
+    border-radius: 0.25rem;
+    /* box-shadow: 0rem 0rem 0.25rem 0rem rgba(0, 0, 0, 0.1); */
+}
+
+/* text area for address */
+.row textarea{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    outline: none;
+    border: 1px solid rgb(139, 130, 130);
+}
+
+/* form title */
+.title{
+    text-align: center;
+    color: #265678;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* placeholder text */
+.row input::placeholder, .row textarea::placeholder{
+    font-size: 0.75rem;
+    font-weight: 300;
+    font-family: 'Fira Sans', sans-serif;
+}
+/* sub title */
+.subtitle{
+    padding: 1rem 0rem;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+/* submit button */
+.submit{
+    padding: 0.75rem 1rem;
+    background-color: #265678;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'PT Sans', sans-serif;
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    text-align: center;
+    letter-spacing: 1px;
+    width: 100%;
+    margin: 2rem 0rem 0rem;
+    cursor: pointer;
+}
+/* hover over button */
+.submit:hover{
+    background-color: #4b7594;
+    color: rgb(228, 222, 222);
+    transition: background-color 0.25ms ease-in-out;
+}
+
+/* radio button style */
+.row_radio{
+    font-weight: 300;
+    font-size: 0.875rem;
+}
+
+.gender_label{
+    margin-right: 4rem;
+    width: 8rem;
+    font-weight: 300;
+    font-size: 0.875rem;
+}
+
+/*space the radio items  */
+.space_radio{
+    margin-right: 0.75rem;
+}
+
+/* checkbox style */
+.row_check{
+    font-weight: 300;
+    font-size: 0.875rem;
+    margin-top: 2rem;
+}
+
+/* space buttons from text */
+.row_check input[type="checkbox"], .row_radio input[type="radio"]{
+    margin-right: 0.5rem;
+}
+
+/* no outline on the fieldsets */
+.no_outline{
+    outline: none;
+    border: none;
+}
+
+/* wrong input validation  */
+input:focus:invalid{
+    color: rgb(252, 16, 16);
+    border: 1px solid rgb(252, 16, 16);
 }
